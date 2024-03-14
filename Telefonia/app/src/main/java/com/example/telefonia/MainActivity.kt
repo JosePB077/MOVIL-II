@@ -7,8 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.telefonia.screens.Inicio
+import com.example.telefonia.ui.theme.screens.Inicio
 import com.example.telefonia.ui.theme.TelefoniaTheme
+import com.example.telefonia.ui.theme.viewModel.ViewModelMsj
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
