@@ -19,7 +19,7 @@ enum class Demo(
     val iconResourceId: Int,
 ) {
     NONE("", View.NO_ID),
-    ACCELEROMETER("Accelerometer", R.drawable.ic_launcher_foreground),
+    ACCELEROMETER("Futbolito", R.drawable.ic_launcher_foreground),
 }
 
 @Composable

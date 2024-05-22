@@ -17,8 +17,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import dev.ricknout.composesensors.accelerometer.isAccelerometerSensorAvailable
 import dev.ricknout.composesensors.accelerometer.rememberAccelerometerSensorValueAsState
@@ -55,7 +58,7 @@ fun AccelerometerDemo() {
 
         Demo(
             demo = Demo.ACCELEROMETER,
-            value = "X: $x m/s^2\nY: $y m/s^2\nZ: $z m/s^2",
+            value = " ",
         ) {
             val width = constraints.maxWidth.toFloat()
             val height = constraints.maxHeight.toFloat()
@@ -98,12 +101,16 @@ fun AccelerometerDemo() {
             }
 
             Box {
+                // val image = ImageBitmap.imageResource(id = R.drawable.futbolito)
                 Canvas(
                     modifier = Modifier.fillMaxSize()
                 ) {
                     // Dibuja el campo de fútbol
                     drawRect(color = Color.Blue, size = Size(fieldWidth, fieldHeight))
-
+                    /*drawImage(
+                        image = image,
+                        dstSize = IntSize(width.toInt(), height.toInt())
+                    )*/
                     // Dibuja los obstáculos (porterías)
                     for (obstacle in obstacles) {
                         drawRect(
